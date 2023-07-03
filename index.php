@@ -2,28 +2,40 @@
     // ARRAY MATCHES
     $mathches = [
         [
-            'teams' => 'Crotone - Salernitana',
-            'results' => '50-80'
+            'homeTeam' => 'Crotone',
+            'guestTeam' => 'Salernitana',
+            'homePoints' => '50',
+            'guestPoints' => '80'
         ],
         [
-            'teams' => 'Genova - Oristano',
-            'results' => '20-50'
+            'homeTeam' => 'Genova',
+            'guestTeam' => 'Oristano',
+            'homePoints' => '20',
+            'guestPoints' => '50'
         ],
         [
-            'teams' => 'Monte Rotondo - Roma',
-            'results' => '80-102'
+            'homeTeam' => 'Monte Rotondo',
+            'guestTeam' => 'Roma',
+            'homePoints' => '80',
+            'guestPoints' => '102'
         ],
         [
-            'teams' => 'Samassi - Firenze',
-            'results' => '30-30'
+            'homeTeam' => 'Samassi',
+            'guestTeam' => 'Firenze',
+            'homePoints' => '30',
+            'guestPoints' => '30'
         ],
         [
-            'teams' => 'Colle Monfortani - Ostia',
-            'results' => '35-90'
+            'homeTeam' => 'Colle Monfortani',
+            'guestTeam' => 'Ostia',
+            'homePoints' => '35',
+            'guestPoints' => '90'
         ],
         [
-            'teams' => 'Lunghezza - Bolzano',
-            'results' => '50-75'
+            'homeTeam' => 'Lunghezza',
+            'guestTeam' => 'Bolzano',
+            'homePoints' => '50',
+            'guestPoints' => '75'
         ],
     ]
 ?>
@@ -42,7 +54,7 @@
         <?php 
             // CICLE FOR-EACH
             foreach($mathches as $match){
-                echo "<li>" .$match['teams']." | " .$match['results'] ."</li>";
+                echo "<li>" .$match['homeTeam']." - ".$match['guestTeam']." | " .$match['homePoints']." - ".$match['guestPoints'] ."</li>";
             } 
         ?>
     </ul>
