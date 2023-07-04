@@ -57,7 +57,48 @@
         if(is_numeric($_GET['age'])){
             $cAge = true;
         }
-    }
+    };
+
+    // SNACK-3
+    // ARRAY POSTS
+    $posts = [
+        '01/08/2015' => [
+            [
+                'title' => 'Post Sea',
+                'author' => 'Francesco Sabbia',
+                'text'  => 'The sea' 
+            ],
+            [
+                'title' => 'Post Mountain',
+                'author' => 'Giuseppe Alpen',
+                'text'  => 'The big Mountain' 
+            ],
+            [
+                'title' => 'Post Rome',
+                'author' => 'Laura dalla Chiesa',
+                'text'  => 'Rome to night' 
+            ]
+        ],
+    '05/10/2020' => [
+            [
+                'title' => 'Post Random',
+                'author' => 'Matteo Messina',
+                'text'  => 'The random' 
+            ]
+        ],
+    "10/10/2010" => [
+            [
+                'title' => 'Post Food',
+                'author' => 'Lorenzo Rovagnati',
+                'text'  => 'The cheescake' 
+            ],
+            [
+                'title' => 'Post in Air',
+                'author' => 'Vanesssa Pes',
+                'text'  => 'The Hot Air Balloon' 
+            ]
+        ],    
+    ];
 ?>
 
 <!DOCTYPE html>
@@ -102,5 +143,17 @@
             } ?>    
         <?php } ?>
     </div>
+    <h1 class="mt-3">SNACK 3</h1>
+    <ul>
+        <!-- CICLES FOR-EACH -->
+        <?php foreach($posts as $date => $post){ ?>
+            <?php echo "<li>" .$date ."</li>"; ?>
+            <ul>
+                <?php foreach($post as $item){ ?>
+                    <?php echo "<li>" .$item['title'] ." | " .$item['author'] ." | " .$item['text'] ."</li>"; ?>
+                <?php }?>
+            </ul>
+        <?php }?>
+    </ul>
 </body>
 </html>
